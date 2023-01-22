@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 import { API_BASE, BR } from '../kernel/kernel'
 
 const basicFech = async endpoint => {
@@ -12,42 +11,42 @@ export default {
     return [
       {
         slug: 'originais',
-        titulo: 'Originais da NetFlix',
-        item: await basicFech(`/discover/tv?with_netwoork=213&${BR}`)
+        title: 'Originais da NetFlix',
+        item: await basicFech(`/discover/tv?with_network=213&${BR}`)
       },
       {
         slug: 'Trending',
-        titulo: 'Recomendados para você',
+        title: 'Recomendados para você',
         item: await basicFech(`/trending/all/week?${BR}`)
       },
       {
         slug: 'troprated',
-        titulo: 'Em Alta',
+        title: 'Em Alta',
         item: await basicFech(`/movie/top_rated?${BR}`)
       },
       {
         slug: 'action',
-        titulo: 'Ação',
+        title: 'Ação',
         item: await basicFech(`/discover/movie?with_genres=28&${BR}`)
       },
       {
         slug: 'comedy',
-        titulo: 'Comedia',
+        title: 'Comedia',
         item: await basicFech(`/discover/movie?with_genres=35&${BR}`)
       },
       {
         slug: 'horror',
-        titulo: 'Terror',
+        title: 'Terror',
         item: await basicFech(`/discover/movie?with_genres=27&${BR}`)
       },
       {
         slug: 'romance',
-        titulo: 'Romance',
+        title: 'Romance',
         item: await basicFech(`/discover/movie?with_genres=10749&${BR}`)
       },
       {
         slug: 'documentary',
-        titulo: 'Documentario',
+        title: 'Documentario',
         item: await basicFech(`/discover/movie?with_genres=99&${BR}`)
       }
     ]
