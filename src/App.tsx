@@ -1,12 +1,14 @@
+import React from 'react'
 import Categorias from './components/Categorias/Categorias'
+import './App.css';
 
-export default function App():JSX.Element {
+export default function App() {
 
-return (
-<>
-<Categorias/>
-</>
+  return (
+    <div className="page">
+      <section className="lists">
+        <Categorias />
+      </section>
+    </div>
   )
 }
-
-
